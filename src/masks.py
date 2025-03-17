@@ -1,31 +1,18 @@
-from typing import Union
-
-
-def get_mask_card_number(a: Union[int]) -> Union[int]:
+def get_mask_card_number(a: [str]) -> [str]:
     """Функцию маскировки номера банковской карты"""
-    number_card = list(input("Введите номер карты  "))
-    first_seven_number = number_card[0:6]
-    number_card[6:12] = ["*", "*", "*", "*", "*", "*"]
-    two_six_number = number_card[6:12]
-    tree_four_number = number_card[12:]
-    number_card_new = first_seven_number + two_six_number + tree_four_number
-    number_card_new.insert(4, " ")
-    number_card_new.insert(9, " ")
-    number_card_new.insert(14, " ")
-    number_card_new_s = "".join(number_card_new)
-    print(number_card_new_s)
+    number_card = input("Введите номер карты  ")
+    number_card_new = f'{number_card[0:4]} {number_card[4:6]}** **** {number_card[12:]}'
+    print(number_card_new)
 
 
-get_mask_card_number()
+get_mask_card_number([str])
 
 
-def get_mask_account(a: Union[int]) -> Union[int]:
+def get_mask_account(a: [str]) -> [str]:
     """Функцию маскировки номера банковского счета"""
-    number_check = list(input("Введите номер счета  "))
-    tree_four_check = number_check[15:]
-    tree_four_check[0:1] = ["*", "*"]
-    number_check_new_s = "".join(tree_four_check)
+    number_check = input("Введите номер счета  ")
+    number_check_new_s = f'**{number_check[15:]}'
     print(number_check_new_s)
 
 
-get_mask_account()
+get_mask_account([str])
