@@ -5,6 +5,7 @@ def mask_account_card(details_card: Union[str]) -> Union[str]:
     """Функцию вывода номера карты или счета с функцией маскировки"""
     details_card_splits = details_card.split(" ")
     from src.masks import get_mask_account, get_mask_card_number
+
     if details_card_splits[0] == "Счет":
         return f"{details_card_splits[0]} {get_mask_account(details_card_splits[1])}"
     else:
