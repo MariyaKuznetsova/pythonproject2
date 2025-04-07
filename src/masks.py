@@ -10,8 +10,8 @@ def get_mask_card_number(number_card: Union[str]) -> Union[str]:
         return number_card_new
 
 
-#number_card = "184878648644444"
-#get_mask_card_number(number_card)
+# number_card = "184878648644444"
+# get_mask_card_number(number_card)
 
 
 def get_mask_account(number_check: Union[str]) -> Union[str]:
@@ -23,5 +23,5 @@ def get_mask_account(number_check: Union[str]) -> Union[str]:
         return number_check_new_s
 
 
-#number_check = "9848418484941515151895684"
-#get_mask_account(number_check)
+# number_check = "9848418484941515151895684"
+# get_mask_account(number_check)

@@ -69,6 +69,7 @@ def test_get_mask_card_number_five4(examples_of_values4):
 def test_get_mask_card_number_six(entering_a_value, function_output):
     assert get_mask_card_number(entering_a_value) == function_output
 
+
 def test_get_mask_account():
     assert get_mask_account("64644981848494151515189") == "**51515189"
 

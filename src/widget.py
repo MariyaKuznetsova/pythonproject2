@@ -16,10 +16,6 @@ def mask_account_card(details_card: Union[str]) -> Union[str]:
         return f"{details_card_splits[0]} {get_mask_card_number(details_card_splits[-1])}"
 
 
-details_card = "Visa Gold 599941422842635384882"
-print(mask_account_card(details_card))
-
-
 def get_date(date_str: Union[str]) -> Union[str]:
     """Функцию преобразования строки в строку с датой"""
     if date_str == " ":
@@ -29,7 +25,3 @@ def get_date(date_str: Union[str]) -> Union[str]:
     else:
         date_new = f'"{date_str[8:10]}.{date_str[5:7]}.{date_str[:4]}"'
         return date_new
-
-
-date_str = "2025-04-01T02:26:18.653543"
-print(get_date(date_str))

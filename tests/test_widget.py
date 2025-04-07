@@ -69,6 +69,7 @@ def test_mask_account_card_five4(examples_mask_card4):
 def test_mask_account_card_six(entering_mask_card, function_output_mask_card):
     assert mask_account_card(entering_mask_card) == function_output_mask_card
 
+
 def test_get_date():
     assert get_date("2024-03-11T02:26:18.671407") == '"11.03.2024"'
 
@@ -97,12 +98,12 @@ def examples_get_date2():
 
 @pytest.fixture
 def examples_get_date3():
-    return 'Неправильный формат данных'
+    return "Неправильный формат данных"
 
 
 @pytest.fixture
 def examples_get_date4():
-    return 'Неправильный формат данных'
+    return "Неправильный формат данных"
 
 
 def test_get_date_five1(examples_get_date1):
@@ -127,7 +128,7 @@ def test_get_date_five4(examples_get_date4):
         (" ", "Неправильный формат данных"),
         ("2025-04-01T02:26:18.653543", '"01.04.2025"'),
         ("2000-08-05T02:26:18.653543", '"05.08.2000"'),
-        ("26848174636241832652", 'Неправильный формат данных'),
+        ("26848174636241832652", "Неправильный формат данных"),
     ],
 )
 def test_get_date_six(entering_get_date, function_output_get_date):
