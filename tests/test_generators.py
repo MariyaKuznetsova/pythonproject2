@@ -50,6 +50,7 @@ transactions = [
     },
 ]
 
+
 def test_filter_by_currency():
     result_filter = [
         {
