@@ -24,7 +24,7 @@ def transaction_descriptions(transactions: List[Dict]) -> List[Dict]:
 
 def card_number_generator(start: int, stop: int) -> int:
     """Генератор, который выдает номера банковских карт в формате
-XXXX XXXX XXXX XXXX. start - начало диапазона, stop - конец диапазона"""
+    XXXX XXXX XXXX XXXX. start - начало диапазона, stop - конец диапазона"""
     while start <= stop:
         number = f"{start:016d}"
         yield f"{number[0:4]} {number[4:8]} {number[8:12]} {number[12:]}"
