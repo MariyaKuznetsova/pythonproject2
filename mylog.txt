@@ -1,1 +1,1 @@
-test_function_5 ok
+test_function_5 error: TypeError. Inputs: (), {}
