@@ -17,7 +17,7 @@ def func_csv_(csv_file: Union[str]) -> List[Dict]:
         return []
 
 
-# print(func_csv_("../data/trans_read_test.csv"))
+print(func_csv_("../data/transactions.csv"))
 
 
 def excel_func(excel_file: Union[str]) -> List[Dict]:
@@ -30,4 +30,4 @@ def excel_func(excel_file: Union[str]) -> List[Dict]:
         return []
 
 
-# print(excel_func("../data/transactions_excel_test.xlsx"))
+print(excel_func("../data/transactions_excel.xlsx"))
