@@ -3,6 +3,7 @@ from typing import Dict
 
 import requests
 from dotenv import load_dotenv
+
 """Загружаем API ключ в окружение"""
 load_dotenv(".env")
 """Читаем API ключ из окружения"""

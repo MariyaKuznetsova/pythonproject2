@@ -22,7 +22,7 @@ def my_function_2(x, y):
     return x + y
 
 
-def test_log(capsys):
+def test_log_1(capsys):
     my_function_2(1, 6)
     captured = capsys.readouterr()
     assert captured.out == "my_function_2 ok\n"
@@ -41,7 +41,7 @@ def my_function_4(a, b):
     raise Exception("test_my_function_4 error: ZeroDivisionError. Inputs: (1, 0), {}")
 
 
-def test_log(capsys):
+def test_log_2(capsys):
     try:
         my_function_4(1, 0)
     except Exception:
@@ -61,7 +61,7 @@ with tempfile.NamedTemporaryFile(delete=False) as temp_file:
 try:
 
     @log(filename=filename)
-    def test_function_5(x, y):
+    def test_function_6(x, y):
         return x + y
 
     test_function_5(1, 2)
