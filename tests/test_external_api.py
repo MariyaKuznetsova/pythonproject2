@@ -1,7 +1,6 @@
 import os
 from unittest.mock import Mock, patch
 
-
 from dotenv import load_dotenv
 
 from src.external_api import convert_func
