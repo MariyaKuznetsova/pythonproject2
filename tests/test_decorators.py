@@ -64,10 +64,10 @@ try:
     def test_function_6(x, y):
         return x + y
 
-    test_function_5(1, 2)
+    test_function_6(1, 2)
 
     with open(filename, "r") as file:
         logs = file.read()
-        assert "test_function_5 ok" in logs
+        assert "test_function_6 ok" in logs
 finally:
     os.remove(filename)
