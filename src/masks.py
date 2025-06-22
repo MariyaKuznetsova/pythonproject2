@@ -1,8 +1,10 @@
 import logging
+import os
 from typing import Union
 
 logger = logging.getLogger("masks")
 logger.setLevel(logging.DEBUG)
+os.makedirs("../logs", exist_ok=True)
 file_handler = logging.FileHandler("../logs/masks.log", mode="w", encoding="utf-8")
 file_formatter = logging.Formatter("%(asctime)s %(name)s %(levelname)s: %(message)s")
 file_handler.setFormatter(file_formatter)
@@ -27,8 +29,8 @@ def get_mask_card_number(number_card: Union[str]) -> Union[str]:
         logger.error(f"Произошла ошибка: {ex}")
 
 
-number_card = " "
-get_mask_card_number(number_card)
+# number_card = " "
+# get_mask_card_number(number_card)
 
 logger.debug(f"Выполняется функция маскировки номера банковского счета: {'get_mask_account'}")
 
@@ -49,5 +51,5 @@ def get_mask_account(number_check: Union[str]) -> Union[str]:
         logger.error(f"Произошла ошибка: {ex}")
 
 
-number_check = "9848418484941515151895684"
-get_mask_account(number_check)
+# number_check = "9848418484941515151895684"
+# get_mask_account(number_check)
