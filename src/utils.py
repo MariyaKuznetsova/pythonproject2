@@ -27,6 +27,7 @@ def operation_func(operations_file: Union[str] | Dict) -> List[Dict]:
         logger.error(f"Произошла ошибка: {ex}")
         return []
 
+
 #
 # d = operation_func("../data/operations.json")
 # print(d)

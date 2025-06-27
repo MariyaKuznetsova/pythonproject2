@@ -17,7 +17,7 @@ def func_csv_(csv_file: Union[str]) -> List[Dict]:
         return []
 
 
-#print(func_csv_("transactions.csv"))
+# print(func_csv_("transactions.csv"))
 
 
 def excel_func(excel_file: Union[str]) -> List[Dict]:
