@@ -28,4 +28,14 @@ def operation_func(operations_file: Union[str] | Dict) -> List[Dict]:
         return []
 
 
-# operation_func("../data/operations.json")
+#
+# d = operation_func("../data/operations.json")
+# print(d)
+# states = []
+#
+# # Проходим по каждому словарю в списке
+# for transaction in d:
+#     if 'state' in transaction:
+#         states.append(transaction['state'])
+#
+# print(states)
