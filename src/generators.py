@@ -2,14 +2,15 @@ from typing import Dict, List, Union
 
 
 def filter_by_currency(transactions: List[Dict], currency: Union[str]) -> List[Dict]:
-    """Функция возвращает итератор, который поочередно выдает транзакции, где валюта операции соответствует заданной."""
+    """Функция возвращает итератор, который поочередно выдает транзакции,
+    где валюта операции соответствует заданной."""
     try:
         for i in transactions:
             if i["operationAmount"]["currency"]["code"] == currency:
                 yield i
             elif i["operationAmount"]["currency"]["code"] != currency:
                 continue
-    except:
+    except Exception:
         print("Неправильный формат данных")
 
 
@@ -18,7 +19,7 @@ def transaction_descriptions(transactions: List[Dict]) -> List[Dict]:
     try:
         for i in transactions:
             yield i["description"]
-    except:
+    except Exception:
         print("Неправильный формат данных")
 
 

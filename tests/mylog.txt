@@ -1,1 +1,1 @@
-my_function_2 ok
+test_function_5 ok
